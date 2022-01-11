@@ -1,0 +1,138 @@
+$ig-med-screen: 1200px !default;
+$ig-small-screen: 768px !default;
+$ig-xsmall-screen: 480px !default;
+.form-container {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: #222;
+  padding: 2rem;
+
+  &__title {
+    padding: 5rem;
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 4rem;
+  }
+  &__subtitle {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    @media (max-width: $ig-small-screen) {
+      font-size: 2rem;
+    }
+    &.light {
+      color: black;
+    }
+  }
+}
+
+.contact-form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+  @media (max-width: $ig-med-screen) {
+    width: 400px;
+  }
+  @media (max-width: $ig-xsmall-screen) {
+    width: 300px;
+  }
+
+  &__group {
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+
+    &:focus-within {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  &__label {
+    font-size: 1.75em;
+    padding: 5px 0;
+    color: white;
+    display: block;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-50px);
+    &.light {
+      color: black;
+    }
+  }
+
+  &__control {
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ccc;
+    border-style: none none solid none;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 2.25em;
+    transition: all 0.6s;
+    padding: 1rem 2.5rem;
+
+    &.light {
+      color: black;
+      border-color: #333;
+
+      &::placeholder {
+        color: #333;
+      }
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: orange;
+      outline: none;
+    }
+    &:invalid:focus {
+      border-color: red;
+    }
+    &:valid:focus {
+      border-color: green;
+    }
+  }
+  &__btn {
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 3em;
+    padding: 10px 50px;
+    text-transform: uppercase;
+
+    &:hover {
+      filter: brightness(110%);
+      cursor: pointer;
+    }
+  }
+  &__alert {
+    font-size: 3rem;
+  }
+}
+
+.focus {
+  opacity: 1;
+  transform: translateX(0px);
+}
+textarea {
+  resize: none;
+}
+.sent {
+  color: #fff;
+}
+
+.g-recaptcha {
+  margin: 0 auto 2rem auto;
+}

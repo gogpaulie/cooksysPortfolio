@@ -1,0 +1,80 @@
+$ig-med-screen: 1200px !default;
+$ig-small-screen: 768px !default;
+$ig-xsmall-screen: 480px !default;
+.nav {
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  &__logo img {
+    height: 100px;
+    width: 100px;
+    &:hover {
+      filter: brightness(110%);
+    }
+    @media (max-width: $ig-small-screen) {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  & i {
+    font-size: 3rem;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+  &.light {
+    color: $light-theme-text;
+  }
+}
+
+.nav.active {
+  background-color: #222;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active.light {
+  background-color: white;
+  & a {
+    color: black;
+  }
+}
+
+.nav.active a {
+  color: white;
+}
+
+.nav.active .container {
+  padding: 10px 0;
+}
+
+.nav a.current,
+.nav a:hover {
+  color: #c0392b;
+}

@@ -1,0 +1,23 @@
+.theme-select {
+  color: white;
+  font-family: inherit;
+  background-color: $dark-theme-background;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  border-image-slice: 1;
+
+  &.light {
+    color: $light-theme-text;
+    background-color: $light-theme-background;
+  }
+
+  &.nineties {
+    color: $nineties-theme-text;
+    background-color: $nineties-theme-background;
+  }
+}

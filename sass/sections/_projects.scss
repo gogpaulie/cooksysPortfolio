@@ -1,0 +1,24 @@
+.projects {
+  margin-top: 20rem;
+  &__title {
+    font-size: 4rem;
+    padding: 2rem 0;
+    margin-bottom: 5rem;
+    text-align: center;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #a162e8 0%,
+      #f7ce68 46%,
+      #85ffbd 100%
+    );
+
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.freelance {
+  margin: 20rem 0;
+}
