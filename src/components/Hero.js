@@ -1,17 +1,17 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 // import Lottie from 'lottie-web';
 // import animate from 'lottie-web';
-import Spacewalk from './Spacewalk';
-import Laptop from './Laptop';
+// import Spacewalk from './Spacewalk';
+// import Laptop from './Laptop';
 import spacewalkGif from '../assets/spacewalk.gif';
 import laptopGif from '../assets/laptop.gif';
 
 const Hero = () => {
   const { theme } = useContext(ThemeContext);
-  const container = useRef(null);
-  const laptop = useRef(null);
+  // const container = useRef(null);
+  // const laptop = useRef(null);
   // useEffect(() => {
   //   Lottie.loadAnimation({
   //     container: container.current,
