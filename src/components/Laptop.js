@@ -1,10 +1,11 @@
-import React from 'react';
 import { useLottie } from 'lottie-react';
 import laptop from './laptop.json';
 
 const Laptop = () => {
+  const laptopString = JSON.stringify(laptop);
+
   const options = {
-    animationData: laptop,
+    animationData: JSON.parse(laptopString),
     loop: true,
     autoplay: true,
   };
