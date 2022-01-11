@@ -1,44 +1,53 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
-import Lottie from 'lottie-web';
-import animate from 'lottie-web';
+// import Lottie from 'lottie-web';
+// import animate from 'lottie-web';
+import Spacewalk from './Spacewalk';
+import Laptop from './Laptop';
+import spacewalkGif from '../assets/spacewalk.gif';
+import laptopGif from '../assets/laptop.gif';
 
 const Hero = () => {
   const { theme } = useContext(ThemeContext);
   const container = useRef(null);
   const laptop = useRef(null);
-  useEffect(() => {
-    Lottie.loadAnimation({
-      container: container.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: require('./spacesuit-dashboard.json'),
-    });
-    animate.setSpeed(0.5);
-    Lottie.loadAnimation({
-      container: laptop.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: require('./laptop.json'),
-    });
-    animate.setSpeed(0.5);
-  }, []);
+  // useEffect(() => {
+  //   Lottie.loadAnimation({
+  //     container: container.current,
+  //     renderer: 'svg',
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: require('./spacesuit-dashboard.json'),
+  //   });
+  //   animate.setSpeed(0.5);
+  //   Lottie.loadAnimation({
+  //     container: laptop.current,
+  //     renderer: 'svg',
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: require('./laptop.json'),
+  //   });
+  //   animate.setSpeed(0.5);
+  // }, []);
 
   return (
     <section className={`Hero patterns patterns__${theme}`}>
       <div className='Hero__animation'>
         <div className='Hero__animation--container'>
-          <div
+          {/* <div
             ref={container}
             style={{ display: theme === 'dark' ? 'block' : 'none' }}
           ></div>
           <div
             ref={laptop}
             style={{ display: theme === 'light' ? 'block' : 'none' }}
-          ></div>
+          ></div> */}
+          {theme === 'dark' ? (
+            <img src={spacewalkGif} alt='spacewalk' srcset='' />
+          ) : (
+            <img src={laptopGif} alt='laptop' srcset='' />
+          )}
         </div>
       </div>
       <div className='Hero__heading'>
